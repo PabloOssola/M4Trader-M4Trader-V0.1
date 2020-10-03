@@ -19,7 +19,7 @@ BEGIN
             or (@IdTiempoLimite = 2 AND o.FechaOperacion between DATEADD(DAY, -1, GETDATE()) and  GETDATE())) -- ultimo dia
 
 
-    if(@importecalculado = tope)
+    if(@importecalculado = @Tope)
     begin
         declare @FechaHasta datetime
 
