@@ -24,7 +24,7 @@ BEGIN
         declare @FechaHasta datetime
 
         SELECT @FechaHasta = CASE @IdTiempoLimite WHEN 1 THEN DATEADD(Hour, 1, GETDATE()) ELSE DATEADD(DAY, 1, GETDATE()) END
-
+         
        INSERT INTO [orden_owner].[usuarioBloqueadoParaOperar]
                ([IdPersona]
                ,[TipoOperacion]
