@@ -1,0 +1,5 @@
+﻿CREATE SEQUENCE [shared_owner].[SQ_Roles]
+    AS SMALLINT
+    START WITH 1
+    INCREMENT BY 1;
+

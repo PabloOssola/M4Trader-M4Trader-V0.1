@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="ef7657df-02a8-4035-9c81-723c4d859877" ChangeDateTime="08/12/2020 14:33:15">
+    <Property Name="ElementName" Value="[dbo].[Themas].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Themas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdThema" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="824bb608-54e5-4084-afd2-f42847d56afc" ChangeDateTime="08/20/2020 01:54:50">
+    <Property Name="ElementName" Value="[dbo].[Operaciones].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Operaciones]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdOperacion" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="618a1f6d-b235-4d45-ac1a-41642c78c157" ChangeDateTime="08/22/2020 18:51:46">
+    <Property Name="ElementName" Value="[orden_owner].[LogBitacoraOperacion].[Fecha]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[orden_owner].[LogBitacoraOperacion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdOperacion" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a534cca7-a966-4776-bfb1-dcf0e00ae39d" ChangeDateTime="08/22/2020 18:51:58">
+    <Property Name="ElementName" Value="[orden_owner].[LogBitacoraOperacion].[TipoSentenciaSQL]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[orden_owner].[LogBitacoraOperacion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdUsuario" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="058beab7-c868-4c8f-bf06-9f36f9343cad" ChangeDateTime="08/24/2020 11:52:34">
+    <Property Name="ElementName" Value="[orden_owner].[Operaciones].[Precio]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[orden_owner].[Operaciones]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NroOperacion" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8a0ab934-ba91-497a-8256-115c1e14f127" ChangeDateTime="09/03/2020 03:40:15">
+    <Property Name="ElementName" Value="[orden_owner].[NovedadesDeTransferencias].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[orden_owner].[NovedadesDeTransferencias]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdNovedadTransferenciaFondo" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f2a588ef-2595-4f14-8c36-2b3a70d0fa2c" ChangeDateTime="09/04/2020 23:43:06">
+    <Property Name="ElementName" Value="[orden_owner].[MovimientosSaldo].[IdOperacion]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[orden_owner].[MovimientosSaldo]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdPropietario" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="014f508f-841c-45e3-aeb7-fd94d1b9fc89" ChangeDateTime="09/04/2020 23:58:26">
+    <Property Name="ElementName" Value="[orden_owner].[MovimientosSaldo].[Estado]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[orden_owner].[MovimientosSaldo]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdEstado" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7ec088ff-85a2-4dcd-a5e6-48225e81ee95" ChangeDateTime="09/18/2020 01:26:06">
+    <Property Name="ElementName" Value="[orden_owner].[Pizarra].[Precio]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[orden_owner].[Pizarra]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PrecioCompra" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cdf049f5-612e-41f3-b967-8d1f1b71f1b6" ChangeDateTime="09/18/2020 01:26:35">
+    <Property Name="ElementName" Value="[orden_owner].[Pizarra].[PrecioVent]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[orden_owner].[Pizarra]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PrecioVenta" />
+  </Operation>
+</Operations>

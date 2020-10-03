@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    imagen:
+    <img id="imagenTemp" src="">
+    video
+    <video id="videoTemp" src="" width="700" height="500">
+
+      Your browser does not support the video tag.
+      </video>
+    <script>
+
+        // const img = document.querySelector('img');
+        // const WS_URL = 'wss:///servicionode.wnpower.host/';//'ws://localhost:3003'; // ws:///servicionode.wnpower.host/';//'ws:///localhost:3003';//
+        // const ws = new WebSocket(WS_URL);
+
+        // let urlObject;
+        // ws.onopen = () => console.log(`conectado a ${WS_URL}`);
+        // ws.onmessage = message => {
+        //     const arrayBuffer = message.data;
+        //     if (urlObject) {
+        //         URL.revokeObjectURL(urlObject);
+        //     }
+
+        //     urlObject = URL.createObjectURL(new Blob(arrayBuffer));
+        //     img.src = urlObject;
+        // }
+
+
+
+
+        // ws.onclose = function (e) {
+        //     console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
+        //     setTimeout(function () {
+        //         ws = new WebSocket(WS_URL);
+        //     }, 1000);
+        // };
+        const img = document.getElementById('imagenTemp');
+        const video = document.getElementById('videoTemp');
+        let urlObject;    
+        function connect() {
+            const WS_URL = 'wss:///servicionode.wnpower.host/';
+            var ws = new WebSocket(WS_URL);
+            ws.onopen = function () {
+                console.log(`conectado a ${WS_URL}`);
+                // subscribe to some channels
+                // ws.send(JSON.stringify({
+                //     //.... some message the I must send when I connect ....
+                // }));
+            };
+
+            ws.onmessage = function (message) {
+                const arrayBuffer = message.data;
+                if (urlObject) {
+                    URL.revokeObjectURL(urlObject);
+                }
+
+                urlObject = URL.createObjectURL(message.data);//new Blob(arrayBuffer));
+                img.src = urlObject;
+                video.src = urlObject;
+            };
+
+            ws.onclose = function (e) {
+                console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
+                setTimeout(function () {
+                    connect();
+                }, 1000);
+            };
+
+            ws.onerror = function (err) {
+                console.error('Socket encountered error: ', err.message, 'Closing socket');
+                ws.close();
+            };
+        }
+
+        connect();
+
+    </script>
+</body>
+
+</html>

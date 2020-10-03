@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Factory="mae.ordenes.services.Services.MarketDataFactory, mae.ordenes.services" Service="mae.ordenes.services.Services.MarketDataService, mae.ordenes.services" %>

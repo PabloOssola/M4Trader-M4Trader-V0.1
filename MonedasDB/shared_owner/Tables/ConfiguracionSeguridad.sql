@@ -1,0 +1,26 @@
+﻿CREATE TABLE [shared_owner].[ConfiguracionSeguridad] (
+    [IdConfiguracionSeguridad]                  TINYINT    CONSTRAINT [DF__ConfiguracionSeguridad__IdConfiguracionSeguridad]  DEFAULT (NEXT VALUE FOR [shared_owner].[SQ_ConfiguracionSeguridad]) NOT NULL,
+    [TimeOutInicialSesion]                      INT        NULL,
+    [TimeOutExtensionSesion]                    INT        NULL,
+    [CantidadIntentosMaximo]                    TINYINT    NOT NULL,
+    [DiasCambioPassword]                        TINYINT    NOT NULL,
+    [MaximoDiasInactividad]                     TINYINT    NULL,
+    [CantidadPasswordsHistoricas]               TINYINT    NOT NULL,
+    [ConsideraMinimoLargoPassword]              BIT        CONSTRAINT [DF__ConfiguracionSeguridad__ConsideraMinimoLargoPassword] DEFAULT ((0)) NOT NULL,
+    [CantidadMinimoLargoPassword]               TINYINT    NULL,
+    [ConsideraCantidadCaracteres]               BIT        CONSTRAINT [DF__ConfiguracionSeguridad__ConsideraCantidadCaracteres] DEFAULT ((0)) NOT NULL,
+    [CantidadAlfabeticosPassword]               TINYINT    NOT NULL,
+    [CantidadNumericosPassword]                 TINYINT    NOT NULL,
+    [ConsideraMaximaCantCaracteresConsecutivos] BIT        CONSTRAINT [DF__ConfiguracionSeguridad__ConsideraMaximaCantCaracteresConsecutivos] DEFAULT ((0)) NOT NULL,
+    [CantidadMaximaCaracteresConsecutivos]      TINYINT    NULL,
+    [CantidadMayusculasPassword]                TINYINT    NULL,
+    [CantidadMinusculasPassword]                TINYINT    NULL,
+    [CantidadSimbolosPassword]                  TINYINT    NULL,
+	[DobleAutenticacion]						VARCHAR(100)	NULL,
+    [PermiteEnviarMail] BIT NOT NULL DEFAULT 0, 
+    [ContraseniaCasilla] NVARCHAR(50) NULL, 
+    [HostSmtp] NVARCHAR(50) NULL, 
+    [PortSmtp] INT NULL, 
+    CONSTRAINT [PK_ConfiguracionSeguridad] PRIMARY KEY CLUSTERED ([IdConfiguracionSeguridad] ASC) WITH (FILLFACTOR = 90)
+);
+

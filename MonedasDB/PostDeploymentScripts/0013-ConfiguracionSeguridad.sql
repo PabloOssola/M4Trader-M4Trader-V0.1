@@ -1,0 +1,40 @@
+﻿IF NOT EXISTS (SELECT 1 FROM shared_owner.ConfiguracionSeguridad WHERE IdConfiguracionSeguridad = 1)
+BEGIN
+	INSERT INTO [shared_owner].[ConfiguracionSeguridad]
+           ([IdConfiguracionSeguridad]
+           ,[TimeOutInicialSesion]
+           ,[TimeOutExtensionSesion]
+           ,[CantidadIntentosMaximo]
+           ,[DiasCambioPassword]
+           ,[MaximoDiasInactividad]
+           ,[CantidadPasswordsHistoricas]
+           ,[ConsideraMinimoLargoPassword]
+           ,[CantidadMinimoLargoPassword]
+           ,[ConsideraCantidadCaracteres]
+           ,[CantidadAlfabeticosPassword]
+           ,[CantidadNumericosPassword]
+           ,[ConsideraMaximaCantCaracteresConsecutivos]
+           ,[CantidadMaximaCaracteresConsecutivos]
+           ,[CantidadMayusculasPassword]
+           ,[CantidadMinusculasPassword]
+           ,[CantidadSimbolosPassword])
+     VALUES
+           (1
+           ,3600
+           ,3600
+           ,3
+           ,30
+           ,30
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0)
+	PRINT 'Insert ID 1'
+END

@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Factory="mae.ordenes.mvc.Services.CommandServiceSistemaFactory, mae.ordenes.mvc" Service="mae.ordenes.mvc.CommandServiceSistema, mae.ordenes.mvc" CodeBehind="CommandServiceSistema.svc.cs" %>
+
+

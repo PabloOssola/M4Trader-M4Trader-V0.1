@@ -1,0 +1,192 @@
+﻿namespace M4Trader.ordenes.server.Entities
+{
+    public enum TipoAccion
+    {
+        TODAS,
+        NO_INTERNAS,
+        INTERNAS,
+    }
+
+    public enum IdAccion
+    {
+        Usuarios = 1,
+        EstadoSistema = 2,
+        CambioClave = 3,
+        GetPermisosAcciones = 4,
+        OrdenarPantallas = 5, 
+        AbrirSistema = 7,
+        AnularCierreSistema = 8,
+        Rol = 9,
+        Monedas = 10,
+        Mercados = 11,
+        Login = 12, 
+        EjecutarProcesosEncadenados = 14,
+        ConfiguracionSistema = 15,
+        ConfiguracionSeguridad = 16,
+        AccionRol = 17,
+        ConsultasGenerales = 18,
+        ConsultasAuditoria = 19,
+        AdministradorUsuario = 20,
+        Sesiones = 21,
+        Personas = 22,
+        Accion = 23,
+        Portfolios = 25,
+        PortfoliosComposicion = 26,
+        PortfoliosUsuario = 27,
+        AppContext = 29,
+        Menu = 30, 
+        AutenticarAPI = 32,
+        AutenticarMobile = 33, 
+        Saldos = 35,
+        ConfirmacionManual = 36, 
+        Traducciones = 38,
+        ConfiguracionInterfaces = 39,
+        CachingManager = 40,
+        RegistroUsuario = 41,
+        AdministracionUsuariosWeb = 42,
+        MenuEstadoSistema = 43,
+        Graficos = 44,
+        PortfolioMercadoProductos = 45,
+        PuntasPortfolio = 46,    
+        GetUserSession = 53,
+        PortfoliosEmpresas = 54,
+        RefrescarCacheCommand = 55,
+        Noticias = 56,
+        Chat = 57,
+        Operaciones = 69,
+        Notificacion = 70,
+        NovedadesDeTransferencia = 71
+    }
+
+    public enum QRYIdAccion
+    {
+        QRY_SCRN_USUARIOS_GRID_MAIN_ALL = 1,
+        QRY_SCRN_CONFIGURACIONROLUSUARIOS = 1,
+        QRY_SCRN_EXPORTAR_USUARIOS_A_EXCEL = 1,
+        QRY_SCRN_USUARIOS_ENTITY_FULL = 1,
+        QRY_CONSULTAR_MEJORES = 1,
+        QRY_UI_USER_SCREEN_STATE = 2,
+        CONSULTABITACORAORDENESCUSTOMQUERY = 6,  
+        QRY_SCRN_ROLES_GRID_MAIN_ALL = 9,
+        QRY_CUSTOM_ROL = 9,
+        CMD_SCRN_VAL_ROL_BAJA_EXISTEACCIONCONROL = 9,
+        QRY_SCRN_MONEDAS_GRID_MAIN_ALL = 10,
+        QRY_CUSTOM_MONEDA = 10,
+        QRY_SCRN_MERCADOS_GRID_MAIN_ALL = 11,
+        QRY_CUSTOM_MERCADO = 11,  
+        QRY_CUSTOM_CONFIGURACIONSISTEMA = 15,
+        QRY_SCRN_CONFIGURACIONSISTEMAURLS = 15,
+        QRY_SCRN_CONFIGURACIONSEGURIDADES_GRID_MAIN_ALL = 16,
+        QRY_SCRN_ACCIONROLES_GRID_MAIN_ALL = 17,
+        QRY_CUSTOM_ACCIONROL = 17,
+        QRY_SCRN_GET_PERMISOS_ACCION = 17,
+        QRY_SCRN_AUDITORIA_GRID_MAIN_ALL = 18,
+        QRY_SCRN_AUDITORIA_DETALLE_GRID_MAIN_ALL = 18,
+        QRY_SCRN_LOGCOMANDOS_GRID_MAIN_ALL = 19,
+        QRY_SCRN_LOGSQLERRORS_GRID_MAIN_ALL = 19,
+        QRY_SCRN_LOGAUDITORIA_GRID_MAIN_ALL = 19,
+        QRY_SCRN_LOGSEGURIDAD_GRID_MAIN_ALL = 19,
+        QRY_SCRN_LOGAUDITORIA_ENTITY_FULL = 19,
+        QRY_SCRN_LOGPROCESOS_GRID_MAIN_ALL = 19, 
+        QRY_CUSTOM_LOGPROCESO = 19,
+        QRY_SCRN_DETALLES_AUDITORIA = 19,
+        QRY_CUSTOM_LOGSEGURIDAD = 19,
+        QRY_SCRN_SESIONES_GRID_MAIN_ALL = 21,
+        QRY_CUSTOM_SESION = 21,
+        SESSION_DELETE = 21,
+        QRY_SCRN_PERSONAS_GRID_MAIN_ALL = 22,
+        QRY_CUSTOM_PERSONA = 22,
+        QRY_SCRN_ACCIONES_GRID_MAIN_ALL = 23,
+        QRY_CUSTOM_ACCION = 23,
+
+        QRY_SCRN_USUARIOS_FILTERS_BUNDLE = 42,
+        QRY_SCRN_USUARIOSLOOKUP_FILTERS_BUNDLE = 18,
+        QRY_SCRN_PERSONASUSUARIOSLOOKUP_FILTERS_BUNDLE = 18,
+        QRY_SCRN_CONFIGURACIONESSISTEMA_FILTERS_BUNDLE = 18,
+        QRY_SCRN_PRODUCTOSLOOKUP_FILTERS_BUNDLE = 18,
+        QRY_SCRN_MONEDAS_FILTERS_BUNDLE = 18,
+        QRY_SCRN_COMBOS_FILTERS_BUNDLE = 18,
+        QRY_SCRN_LOGAUDITORIA_FILTERS_BUNDLE = 18,
+        QRY_SCRN_SESIONESLOOKUP_FILTERS_BUNDLE = 18,
+        QRY_SCRN_PERSONAS_FILTERS_BUNDLE = 18, 
+        QRY_SCRN_CLIENTESLOOKUP_FILTERS_BUNDLE = 18,
+        QRY_CONSULTAR_TRADERPERSONA_GRID_MAIN = 18,
+        QRY_SCRN_ACCIONROLES_FILTERS_BUNDLE = 18,
+        QRY_SCRN_ACCIONLOOKUP_FILTERS_BUNDLE = 18,
+        QRY_SCRN_PERSONASLOOKUP_FILTERS_BUNDLE = 18,
+        QRY_SCRN_PERSONASLOOKUPPERSONAS_FILTERS_BUNDLE = 18,
+        QRY_SCRN_CONFIGURACIONPARTHIERARCHY = 18,   
+        QRY_SCRN_PLAZOS_FILTERS_BUNDLE = 18,
+        QRY_SCRN_MERCADOSLOOKUP_FILTERS_BUNDLE = 18,
+        QRY_SCRN_MERCADOS_FILTERS_BUNDLE = 18, 
+        ORD_SEARCH_USER_LIMITS = 18,
+         
+
+        // Portfolios
+        QRY_SCRN_PORTFOLIOS_GRID_MAIN_ALL = 25,
+        QRY_CUSTOM_PORTFOLIO = 25,
+        QRY_CONSULTAR_PORTFOLIOCOMPOSICION_GRID_MAIN = 25,
+        ALTAPORTFOLIOCOMPOSICIONCOMMAND = 25,
+        ELIMINAPORTFOLIOCOMPOSICIONCOMMAND = 25,
+        QRY_CONSULTAR_PORTFOLIOUSUARIO_GRID_MAIN = 25,
+        QRY_SCRN_PORTFOLIOSUSUARIO_GRID_MAIN_ALL = 25,
+        QRY_SCRN_PORTFOLIOS_FILTERS_BUNDLE = 25,
+
+        // Portfolios Empresas
+        QRY_SCRN_PORTFOLIOSEMPRESAS_GRID_MAIN_ALL = 54,
+        QRY_CUSTOM_PORTFOLIOSEMPRESAS = 54,
+        QRY_CONSULTAR_PORTFOLIOSEMPRESASCOMPOSICION_GRID_MAIN = 54,
+        ALTAPORTFOLIOSEMPRESASCOMPOSICIONCOMMAND = 54,
+        ELIMINAPORTFOLIOSEMPRESASCOMPOSICIONCOMMAND = 54,
+        QRY_CONSULTAR_PORTFOLIOSEMPRESASUSUARIO_GRID_MAIN = 54,
+        QRY_SCRN_PORTFOLIOSEMPRESASUSUARIO_GRID_MAIN_ALL = 54,
+        QRY_SCRN_PORTFOLIOSEMPRESAS_FILTERS_BUNDLE = 54,
+        QRY_SCRN_PRODUCTOSPORMERCADO_PORTFOLIOSEMPRESAS_FILTERS_BUNDLE = 54,
+        QRY_SCRN_MERCADOS_PORTFOLIOSEMPRESAS_FILTERS_BUNDLE = 54,
+        QRY_SCRN_PARTIES_FILTERS_BUNDLE = 54,
+        QRY_SCRN_PARTIES_FOR_PRODUCTOS_FILTERS_BUNDLE = 54,
+
+        QRY_CUSTOM_PORTFOLIOSUSUARIO = 27,
+
+        // ProductosPorMercado
+        QRY_SCRN_PRODUCTOSPORMERCADO_GRID_MAIN_ALL = 31,
+        QRY_SCRN_PRODUCTOSPORMERCADO_FILTERS_BUNDLE = 31,
+        QRY_CUSTOM_PRODUCTOPORMERCADO = 31,
+
+        //Plazos
+
+        // Saldos
+        QRY_SCRN_SALDOS_GRID_MAIN_ALL = 35,
+        CONSULTASALDOCUSTOMQUERY = 35,
+
+        //Configuracion automatica
+        QRY_SCRN_CONFIRMACIONMANUAL_GRID_MAIN_ALL = 36,
+
+        
+        QRY_SCRN_USUARIOSWEB_GRID_MAIN_ALL = 42,
+        QRY_SCRN_USUARIOSWEB_ENTITY_FULL = 42,
+        QRY_SCRN_USUARIOSWEB_FILTERS_BUNDLE = 42,
+
+        // Graficos
+        HIS_CLOSINGMONTH = 44,
+        HIS_CLOSINGWEEK = 44,
+        HIS_CLOSINGDAY = 44,
+        HIS_CLOSING60MIN = 44,
+        HIS_CLOSING30MIN = 44,
+         
+        OPERACIONSTATUSCUSTOMQUERYBYID = 48, 
+        QRY_SCRN_DMA_SEARCHBITACORAORDEN_GRID_MAIN_ALL = 50,  
+        NEWS_GETNOTICIAS = 56,
+
+        //CHAT
+        CHAT_SEARCHCHATLIST = 57,
+        CHAT_GETCHATMESSAGES = 57,
+
+        QRY_SCRN_SALDOSBYMONEDA = 35,
+        QRY_SCRN_MOVIMIENTOSBYOPERACION = 59,
+        QRY_SCRN_OPERACIONESBYPERSONA = 59,
+        QRY_SCRN_MONEDASYSALDOSBYPERSONA = 35,
+        QRY_SCRN_MONEDALOCALYSALDOSBYPERSONA = 35
+
+    }
+}

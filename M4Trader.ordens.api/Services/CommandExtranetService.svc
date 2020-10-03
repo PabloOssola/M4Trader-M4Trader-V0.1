@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MM4Trader.ordenes.services.Services.CommandExtranetService, M4Trader.ordenes.services" CodeBehind="CommandExtranetService.svc.cs" %>

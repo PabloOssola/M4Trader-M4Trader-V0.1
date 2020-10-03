@@ -1,0 +1,14 @@
+{
+    "palette": {
+        "primary1Color": "#212121",
+        "primary2Color": "#c5e1a5",
+        "primary3Color": "#37474f"
+    },
+    "avatar": {
+        "color": "#ffffff"
+    },
+    "appBar": {
+        "color": "#f5f5f5",
+        "textColor": "#000000"
+    }
+}

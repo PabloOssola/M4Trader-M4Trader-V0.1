@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>M4TraderDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{a9bbf811-1430-4272-a05b-b413b6ae2b69}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>MonedasDB</RootNamespace>
+    <AssemblyName>MonedasDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="api_owner" />
+    <Folder Include="api_owner\Sequences" />
+    <Folder Include="api_owner\Stored Procedures" />
+    <Folder Include="api_owner\Tables" />
+    <Folder Include="shared_owner" />
+    <Folder Include="shared_owner\Functions" />
+    <Folder Include="shared_owner\Sequences" />
+    <Folder Include="shared_owner\Stored Procedures" />
+    <Folder Include="shared_owner\Tables" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="Deploy" />
+    <Folder Include="Security" />
+    <Folder Include="SchComp" />
+    <Folder Include="PreDeploymentScripts" />
+    <Folder Include="precios_owner" />
+    <Folder Include="precios_owner\Sequences" />
+    <Folder Include="precios_owner\Stored Procedures" />
+    <Folder Include="PostDeploymentScripts" />
+    <Folder Include="PostDeploymentScripts\MAE_DMA" />
+    <Folder Include="Storage" />
+    <Folder Include="orden_owner" />
+    <Folder Include="orden_owner\Functions" />
+    <Folder Include="orden_owner\Sequences" />
+    <Folder Include="orden_owner\Stored Procedures" />
+    <Folder Include="orden_owner\Tables" />
+    <Folder Include="orden_owner\User Defined Types" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="api_owner\Sequences\SQ_LogCommand.sql" />
+    <Build Include="api_owner\Stored Procedures\LOG_CommandInsert.sql" />
+    <Build Include="api_owner\Tables\LogCommand.sql" />
+    <Build Include="shared_owner\Functions\fn_ARQ_ConvertirFechaAHoraFinal.sql" />
+    <Build Include="shared_owner\Functions\fn_ARQ_ConvertirFechaAHoraInicial.sql" />
+    <Build Include="shared_owner\Functions\fn_String_To_Table.sql" />
+    <Build Include="shared_owner\Sequences\SQ_Acciones.sql" />
+    <Build Include="shared_owner\Sequences\SQ_AccionRol.sql" />
+    <Build Include="shared_owner\Sequences\SQ_ConfiguracionSeguridad.sql" />
+    <Build Include="shared_owner\Sequences\SQ_ConfiguracionSistema.sql" />
+    <Build Include="shared_owner\Sequences\SQ_CustomizacionUsuario.sql" />
+    <Build Include="shared_owner\Sequences\SQ_EstadoSistema.sql" />
+    <Build Include="shared_owner\Sequences\SQ_HistoricoPassword.sql" />
+    <Build Include="shared_owner\Sequences\SQ_LogAuditoria.sql" />
+    <Build Include="shared_owner\Sequences\SQ_MensajesLiterales.sql" />
+    <Build Include="shared_owner\Sequences\SQ_Mercados.sql" />
+    <Build Include="shared_owner\Sequences\SQ_Monedas.sql" />
+    <Build Include="shared_owner\Sequences\SQ_MotivosBaja.sql" />
+    <Build Include="shared_owner\Sequences\SQ_Parties.sql" />
+    <Build Include="shared_owner\Sequences\SQ_PartiesHierarchy.sql" />
+    <Build Include="shared_owner\Sequences\SQ_RechazoMercado.sql" />
+    <Build Include="shared_owner\Sequences\SQ_Roles.sql" />
+    <Build Include="shared_owner\Sequences\SQ_RolUsuario.sql" />
+    <Build Include="shared_owner\Sequences\SQ_SeguridadPermisos.sql" />
+    <Build Include="shared_owner\Sequences\SQ_TiposMoneda.sql" />
+    <Build Include="shared_owner\Sequences\SQ_TiposPersona.sql" />
+    <Build Include="shared_owner\Sequences\SQ_TiposVigencia.sql" />
+    <Build Include="shared_owner\Sequences\SQ_Usuarios.sql" />
+    <Build Include="shared_owner\Sequences\SQ_UsuariosAdministradorParties.sql" />
+    <Build Include="shared_owner\Sequences\SQ_UsuariosLimites.sql" />
+    <Build Include="shared_owner\Sequences\SQ_UsuariosLimitesDiarios.sql" />
+    <Build Include="shared_owner\Stored Procedures\SESSION_DELETE.sql" />
+    <Build Include="shared_owner\Stored Procedures\SESSION_GETBYID.sql" />
+    <Build Include="shared_owner\Stored Procedures\SESSION_INSERT.sql" />
+    <Build Include="shared_owner\Tables\Acciones.sql" />
+    <Build Include="shared_owner\Tables\AccionRol.sql" />
+    <Build Include="shared_owner\Tables\ConfiguracionSeguridad.sql" />
+    <Build Include="shared_owner\Tables\ConfiguracionSistema.sql" />
+    <Build Include="shared_owner\Tables\CustomizacionUsuario.sql" />
+    <Build Include="shared_owner\Tables\EstadoSistema.sql" />
+    <Build Include="shared_owner\Tables\HistoricoPassword.sql" />
+    <Build Include="shared_owner\Tables\LogAuditoria.sql" />
+    <Build Include="shared_owner\Tables\LogAuditoriaClases.sql" />
+    <Build Include="shared_owner\Tables\LogCodigoAccion.sql" />
+    <Build Include="shared_owner\Tables\MensajesLiterales.sql" />
+    <Build Include="shared_owner\Tables\Mercados.sql" />
+    <Build Include="shared_owner\Tables\Monedas.sql" />
+    <Build Include="shared_owner\Tables\MotivosBaja.sql" />
+    <Build Include="shared_owner\Tables\Parties.sql" />
+    <Build Include="shared_owner\Tables\PartiesHierarchy.sql" />
+    <Build Include="shared_owner\Tables\PersoneriaJuridica.sql" />
+    <Build Include="shared_owner\Tables\RechazosMercado.sql" />
+    <Build Include="shared_owner\Tables\Roles.sql" />
+    <Build Include="shared_owner\Tables\RolUsuario.sql" />
+    <Build Include="shared_owner\Tables\SeguridadPermisos.sql" />
+    <Build Include="shared_owner\Tables\Sesiones.sql" />
+    <Build Include="shared_owner\Tables\TiposMoneda.sql" />
+    <Build Include="shared_owner\Tables\TiposPersona.sql" />
+    <Build Include="shared_owner\Tables\TiposVigencia.sql" />
+    <Build Include="shared_owner\Tables\Usuarios.sql" />
+    <Build Include="shared_owner\Tables\UsuariosAdministradorParties.sql" />
+    <Build Include="shared_owner\Tables\UsuariosLimites.sql" />
+    <Build Include="shared_owner\Tables\UsuariosLimitesDiarios.sql" />
+    <Build Include="dbo\Stored Procedures\AMB_CodigosMensajes.sql" />
+    <Build Include="dbo\Stored Procedures\AMB_CodigosMensajesFix.sql" />
+    <Build Include="dbo\Stored Procedures\AMB_LimpiarDatos.sql" />
+    <Build Include="dbo\Stored Procedures\AMB_LimpiarLogs.sql" />
+    <Build Include="dbo\Stored Procedures\AMB_Sequence.sql" />
+    <Build Include="dbo\Tables\CtrlBK.sql" />
+    <Build Include="Deploy\Deploy.sql" />
+    <None Include="Deploy\PostDeploy.sql" />
+    <Build Include="Deploy\PreDeploy.sql" />
+    <Build Include="Security\api_owner.sql" />
+    <Build Include="Security\dbr_precios.sql" />
+    <Build Include="Security\dbr_shared.sql" />
+    <Build Include="Security\orden_owner.sql" />
+    <Build Include="Security\orden_rol.sql" />
+    <Build Include="Security\orden_schemas_owner.sql" />
+    <Build Include="Security\orden_user.sql" />
+    <Build Include="Security\orden_user_1.sql" />
+    <Build Include="Security\precios_owner.sql" />
+    <Build Include="Security\shared_owner.sql" />
+    <None Include="PreDeploymentScripts\0000-CrearSchema.sql" />
+    <None Include="PreDeploymentScripts\0001-MigrarTablasDeBaseFixABaseOrdenesFix.sql" />
+    <None Include="PreDeploymentScripts\0002-MigrarTablasAlShared.sql" />
+    <None Include="PreDeploymentScripts\0003-LimpiarTablas.sql" />
+    <None Include="PreDeploymentScripts\0004-CambiarNombrePartyHierarchyPadreHijo.sql" />
+    <None Include="PreDeploymentScripts\0005-MigrarJerarquiaDePersonas.sql" />
+    <None Include="PreDeploymentScripts\0006-ActualizarColumnasNulas.sql" />
+    <None Include="PreDeploymentScripts\0007-AgregaColumnaCodigoPortfolio.sql" />
+    <None Include="PreDeploymentScripts\0008-CambiarNombrePartyMarketCustomerNumber.sql" />
+    <None Include="PreDeploymentScripts\0009-AgregarColumnaObservacionATablaConfiguracion.sql" />
+    <None Include="PreDeploymentScripts\0010-ValorizacionAgrandarTipoDatos.sql" />
+    <None Include="PreDeploymentScripts\0011-AgregarColumnaIdUsuarioATablaOrdenes.sql" />
+    <None Include="PreDeploymentScripts\DMA.pre.deploy.sql" />
+    <Build Include="precios_owner\Sequences\SQ_CollateralReport.sql" />
+    <Build Include="precios_owner\Sequences\SQ_HistoricoCierres30Min.sql" />
+    <Build Include="precios_owner\Sequences\SQ_HistoricoCierres60Min.sql" />
+    <Build Include="precios_owner\Sequences\SQ_HistoricoCierresDia.sql" />
+    <Build Include="precios_owner\Sequences\SQ_HistoricoCierresMes.sql" />
+    <Build Include="precios_owner\Sequences\SQ_HistoricoCierresSemana.sql" />
+    <Build Include="precios_owner\Sequences\SQ_HistoricoOfertas20Min.sql" />
+    <None Include="PostDeploymentScripts\MAE_DMA\0008-Personas.sql" />
+    <None Include="PostDeploymentScripts\MAE_DMA\0009-Usuarios.sql" />
+    <None Include="PostDeploymentScripts\MAE_DMA\0022-ProductosInserts.sql" />
+    <None Include="PostDeploymentScripts\MAE_DMA\1014-ConfiguracionSistema.sql" />
+    <None Include="PostDeploymentScripts\MAE_DMA\1024-Ruedas.sql" />
+    <None Include="PostDeploymentScripts\MAE_DMA\1026-SecurityList.sql" />
+    <None Include="PostDeploymentScripts\0000_0-CleanDB.sql" />
+    <None Include="PostDeploymentScripts\0000_1-Codigos Mensajes.sql" />
+    <None Include="PostDeploymentScripts\0001-MotivosBaja.sql" />
+    <None Include="PostDeploymentScripts\0002-TiposVigencia.sql" />
+    <None Include="PostDeploymentScripts\0003-RechazosMercado.sql" />
+    <None Include="PostDeploymentScripts\0004-Roles.sql" />
+    <None Include="PostDeploymentScripts\0005-Acciones.sql" />
+    <None Include="PostDeploymentScripts\0006-AccionRol.sql" />
+    <None Include="PostDeploymentScripts\0007-TiposPersona.sql" />
+    <None Include="PostDeploymentScripts\0008-Personas.sql" />
+    <None Include="PostDeploymentScripts\0009-Usuarios.sql" />
+    <None Include="PostDeploymentScripts\0010-RolUsuario.sql" />
+    <None Include="PostDeploymentScripts\0011-EstadosOrden.sql" />
+    <None Include="PostDeploymentScripts\0012-TiposEjecucionMercado.sql" />
+    <None Include="PostDeploymentScripts\0013-ConfiguracionSeguridad.sql" />
+    <None Include="PostDeploymentScripts\0015-LogAuditoriaClases.sql" />
+    <None Include="PostDeploymentScripts\0016-Mercados.sql" />
+    <None Include="PostDeploymentScripts\0017-TiposMoneda.sql" />
+    <None Include="PostDeploymentScripts\0018-Monedas.sql" />
+    <None Include="PostDeploymentScripts\0019-SeguridadPermisos.sql" />
+    <None Include="PostDeploymentScripts\0021-EstadoSistema.sql" />
+    <None Include="PostDeploymentScripts\0022-ProductosInserts.sql" />
+    <None Include="PostDeploymentScripts\0023-LogCodigoAccion_Inserts.sql" />
+    <None Include="PostDeploymentScripts\0024-Portfolios.sql" />
+    <None Include="PostDeploymentScripts\0025-TiposOrden.sql" />
+    <None Include="PostDeploymentScripts\0026-Plazos.sql" />
+    <None Include="PostDeploymentScripts\0027-TiposProducto.sql" />
+    <None Include="PostDeploymentScripts\0028-Sources.sql" />
+    <None Include="PostDeploymentScripts\0029-TiposProductos.sql" />
+    <None Include="PostDeploymentScripts\0031-MensajesLiterales.sql" />
+    <None Include="PostDeploymentScripts\1014-ConfiguracionSistema.sql" />
+    <None Include="PostDeploymentScripts\1015-ConfiguracionSistemaUrl.sql" />
+    <None Include="PostDeploymentScripts\1021-TiposMensajesMarketData.sql" />
+    <None Include="PostDeploymentScripts\1022-TiposMensajesOrdenes.sql" />
+    <None Include="PostDeploymentScripts\1023-TipoNegociacion.sql" />
+    <None Include="PostDeploymentScripts\1024-Ruedas.sql" />
+    <None Include="PostDeploymentScripts\1025-FIX_Interfaces_Parametros.sql" />
+    <None Include="PostDeploymentScripts\1026-SecurityList.sql" />
+    <None Include="PostDeploymentScripts\2000-MigrarDatosEstadistica_PorDia.sql" />
+    <None Include="PostDeploymentScripts\2001-MigrarDatosEstadistica_PorMes.sql" />
+    <None Include="PostDeploymentScripts\2002-MigrarDatosEstadistica_PorSemana.sql" />
+    <None Include="PostDeploymentScripts\2003-MigrarDatosEstadistica_Por60Minutos.sql" />
+    <None Include="PostDeploymentScripts\2004-MigrarDatosEstadistica_Por30Minutos.sql" />
+    <None Include="PostDeploymentScripts\9997-Sequences.sql" />
+    <None Include="PostDeploymentScripts\M4Trader.post.deploy.sql" />
+    <None Include="PostDeploymentScripts\ModificarEsquemasCompartidos.sql" />
+    <Build Include="Storage\FG_Auditoria_001.sql" />
+    <Build Include="Storage\FG_Auditoria_File.sql" />
+    <Build Include="Storage\FG_Precios_001.sql" />
+    <Build Include="Storage\FG_Precios_File.sql" />
+    <Build Include="Storage\FG_Fix_001.sql" />
+    <Build Include="orden_owner\Functions\fn_CHAT_ObtenerContraparte.sql" />
+    <Build Include="orden_owner\Functions\fn_ORD_PreciosHistoricosAsString.sql" />
+    <Build Include="orden_owner\Sequences\SQ_ChatMensajes.sql" />
+    <Build Include="orden_owner\Sequences\SQ_Chats.sql" />
+    <Build Include="orden_owner\Sequences\SQ_ChatTipoMensaje.sql" />
+    <Build Include="orden_owner\Sequences\SQ_ChatUsuarios.sql" />
+    <Build Include="orden_owner\Sequences\SQ_ConfiguracionSistemaUrls.sql" />
+    <Build Include="orden_owner\Sequences\SQ_ConfirmacionManual.sql" />
+    <Build Include="orden_owner\Sequences\SQ_EstadosOrden.sql" />
+    <Build Include="orden_owner\Sequences\SQ_LogBitacoraOrdenes.sql" />
+    <Build Include="orden_owner\Sequences\SQ_LogCommand.sql" />
+    <Build Include="orden_owner\Sequences\SQ_LogConectividad.sql" />
+    <Build Include="orden_owner\Sequences\SQ_LogProcesos.sql" />
+    <Build Include="orden_owner\Sequences\SQ_LogSeguridad.sql" />
+    <Build Include="orden_owner\Sequences\SQ_LogSqlErrores.sql" />
+    <Build Include="orden_owner\Sequences\SQ_Noticias.sql" />
+    <Build Include="orden_owner\Sequences\SQ_OperacionHistorico.sql" />
+    <Build Include="orden_owner\Sequences\SQ_Portfolios.sql" />
+    <Build Include="orden_owner\Sequences\SQ_PortfoliosComposicion.sql" />
+    <Build Include="orden_owner\Sequences\SQ_PortfoliosUsuario.sql" />
+    <Build Include="orden_owner\Sequences\SQ_Precios.sql" />
+    <Build Include="orden_owner\Sequences\SQ_PreciosHistoricos.sql" />
+    <Build Include="orden_owner\Sequences\SQ_Saldo.sql" />
+    <Build Include="orden_owner\Sequences\SQ_Sources.sql" />
+    <Build Include="orden_owner\Sequences\SQ_TiposCuenta.sql" />
+    <Build Include="orden_owner\Sequences\SQ_TiposOrden.sql" />
+    <Build Include="orden_owner\Sequences\SQ_TiposProducto.sql" />
+    <Build Include="orden_owner\Stored Procedures\AMB_AlterSequence.sql" />
+    <Build Include="orden_owner\Stored Procedures\CHAT_GETCHATMESSAGES.sql" />
+    <Build Include="orden_owner\Stored Procedures\CHAT_INSERTARCHAT.sql" />
+    <Build Include="orden_owner\Stored Procedures\CHAT_INSERTARMENSAJECHAT.sql" />
+    <Build Include="orden_owner\Stored Procedures\CHAT_SEARCHCHATLIST.sql" />
+    <Build Include="orden_owner\Stored Procedures\CMD_SCRN_VAL_PERSONA_BAJA_EXISTENHIJOS.sql" />
+    <Build Include="orden_owner\Stored Procedures\CMD_SCRN_VAL_PERSONA_BAJA_EXISTENPADRES.sql" />
+    <Build Include="orden_owner\Stored Procedures\CMD_SCRN_VAL_ROL_BAJA_EXISTEACCIONCONROL.sql" />
+    <Build Include="orden_owner\Stored Procedures\DMA_AgregarPortfolioAUsuario.sql" />
+    <Build Include="orden_owner\Stored Procedures\LOG_CommandInsert.sql" />
+    <Build Include="orden_owner\Stored Procedures\LOG_ConectividadInsert.sql" />
+    <Build Include="orden_owner\Stored Procedures\LOG_ProcesosInsert.sql" />
+    <Build Include="orden_owner\Stored Procedures\LOG_SeguridadInsert.sql" />
+    <Build Include="orden_owner\Stored Procedures\LOG_SqlErroresInsert.sql" />
+    <Build Include="orden_owner\Stored Procedures\LV_ConsultaMotivoBaja.sql" />
+    <Build Include="orden_owner\Stored Procedures\MSG_ObtenerMensajeByCodigo.sql" />
+    <Build Include="orden_owner\Stored Procedures\NEWS_GETNOTICIAS.sql" />
+    <Build Include="orden_owner\Stored Procedures\PER_CHECKEXISTANCE.sql" />
+    <Build Include="orden_owner\Stored Procedures\PER_ObtenerPersonaByID.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_CONSULTAR_PORTFOLIOCOMPOSICION_GRID_MAIN.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_CONSULTAR_PORTFOLIOSEMPRESASCOMPOSICION_GRID_MAIN.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_ACCIONES_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_ACCIONLOOKUP_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_ACCIONROLES_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_ACCIONROLES_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_AUDITORIA_DETALLE_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_AUDITORIA_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_BITACORAORDENES_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_CLIENTESLOOKUP_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_COMBOS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_CONFIGURACIONESSISTEMA_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_CONFIGURACIONROLUSUARIOS.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_CONFIGURACIONSEGURIDADES_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_CONFIGURACIONSISTEMAURLS.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_CONFIRMACIONMANUAL_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_DETALLES_AUDITORIA.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_DMA_ORDEN_DETALLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_ESTADOS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_EXPORTAR_USUARIOS_A_EXCEL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_GET_PERMISOS_ACCION.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_LOGAUDITORIA_ENTITY_FULL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_LOGAUDITORIA_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_LOGAUDITORIA_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_LOGCOMANDOS_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_LOGPROCESOS_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_LOGPROCESOS_VIEW_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_LOGSEGURIDAD_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_LOGSEGURIDAD_VIEW_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_LOGSQLERRORS_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_MERCADOS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_MERCADOS_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_MERCADOS_PORTFOLIOSEMPRESAS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_MercadosLookup_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_MONEDAS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_MONEDAS_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PARTIES_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PARTIES_FOR_PRODUCTOS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PERSONAS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PERSONAS_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PERSONASLOOKUP_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PERSONASLOOKUPPERSONAS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PERSONASUSUARIOSLOOKUP_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PORFOLIO_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PORTFOLIOS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PORTFOLIOS_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PORTFOLIOSEMPRESAS_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PORTFOLIOSLOOKUP_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_PORTFOLIOSUSUARIO_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_ROLES_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_SALDOS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_SALDOS_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_SEARCHBITACORAORDEN_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_SEARCHHISTORICOMERCADO_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_SEARCHHISTORY_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_USUARIOS_ENTITY_FULL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_USUARIOS_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_USUARIOS_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_USUARIOSLOOKUP_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_USUARIOSWEB_ENTITY_FULL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_USUARIOSWEB_FILTERS_BUNDLE.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_USUARIOSWEB_GRID_MAIN_ALL.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_UI_USER_SCREEN_STATE.sql" />
+    <Build Include="orden_owner\Stored Procedures\SEG_GETALLPERMISOSBYUSUARIO.sql" />
+    <Build Include="orden_owner\Stored Procedures\USER_InsertarCustomizacionUsuario.sql" />
+    <Build Include="orden_owner\Stored Procedures\USUARIO_ActualizarUsuario.sql" />
+    <Build Include="orden_owner\Stored Procedures\USUARIO_EliminarUsuario.sql" />
+    <Build Include="orden_owner\Stored Procedures\XML_SALDOS_PROCESSING.sql" />
+    <Build Include="orden_owner\Tables\ChatMensajes.sql" />
+    <Build Include="orden_owner\Tables\Chats.sql" />
+    <Build Include="orden_owner\Tables\ChatTiposMensaje.sql" />
+    <Build Include="orden_owner\Tables\ChatUsuarios.sql" />
+    <Build Include="orden_owner\Tables\ConfiguracionSistemaUrls.sql" />
+    <Build Include="orden_owner\Tables\ConfirmacionManual.sql" />
+    <Build Include="orden_owner\Tables\LogCommand.sql" />
+    <Build Include="orden_owner\Tables\LogProcesos.sql" />
+    <Build Include="orden_owner\Tables\LogSeguridad.sql" />
+    <Build Include="orden_owner\Tables\LogSqlErrores.sql" />
+    <Build Include="orden_owner\Tables\Noticias.sql" />
+    <Build Include="orden_owner\Tables\Portfolios.sql" />
+    <Build Include="orden_owner\Tables\PortfoliosComposicion.sql" />
+    <Build Include="orden_owner\Tables\PortfolioUsuario.sql" />
+    <Build Include="orden_owner\Tables\Precios.sql" />
+    <Build Include="orden_owner\Tables\PreciosHistoricos.sql" />
+    <Build Include="orden_owner\Tables\Saldos.sql" />
+    <Build Include="orden_owner\Tables\TiposProducto.sql" />
+    <Build Include="orden_owner\User Defined Types\Int32List.sql" />
+    <Build Include="orden_owner\Tables\TiposCuenta.sql" />
+    <Build Include="shared_owner\Tables\Theme.sql" />
+    <Build Include="orden_owner\Tables\MovimientosSaldo.sql" />
+    <Build Include="shared_owner\Tables\TiposMovimiento.sql" />
+    <Build Include="orden_owner\Sequences\SQ_MovimientosSaldo.sql" />
+    <Build Include="shared_owner\Sequences\SQ_TipoMovimiento.sql" />
+    <Build Include="orden_owner\Tables\Operaciones.sql" />
+    <Build Include="orden_owner\Sequences\SQ_Operaciones.sql" />
+    <Build Include="orden_owner\Tables\Transacciones.sql" />
+    <Build Include="orden_owner\Sequences\SQ_Transacciones.sql" />
+    <Build Include="orden_owner\Tables\SaldosHistoricos.sql" />
+    <Build Include="orden_owner\Sequences\SQ_SaldosHistoricos.sql" />
+    <Build Include="orden_owner\Stored Procedures\OPE_GetSaldoByPersonaYMoneda.sql" />
+    <Build Include="orden_owner\Stored Procedures\OPE_ImpactarEnSaldoByPersonaYMoneda.sql" />
+    <Build Include="orden_owner\Stored Procedures\OPE_GenerarMovimientosByPersonaYMoneda.sql" />
+    <Build Include="orden_owner\Stored Procedures\OPE_ImpactarEnSaldoHistoricosOperacionesDelDia.sql" />
+    <Build Include="orden_owner\Stored Procedures\OPE_CrearOperacion.sql" />
+    <Build Include="orden_owner\Stored Procedures\OPE_ObtenerUltimaActualizacionSaldo.sql" />
+    <None Include="PostDeploymentScripts\01-MensajesLiteralesM4Trader.sql" />
+    <Build Include="orden_owner\Tables\NovedadesDeTransferencias.sql" />
+    <Build Include="orden_owner\Sequences\SQ_NovedadTransferenciaFondo.sql" />
+    <Build Include="orden_owner\Stored Procedures\NOV_CrearNovedad.sql" />
+    <Build Include="orden_owner\Stored Procedures\Nov_AgregarDespositoEnSaldoByPersonaYMoneda.sql" />
+    <Build Include="orden_owner\Tables\EstadosMovimientos.sql" />
+    <Build Include="orden_owner\Stored Procedures\NOV_ObtenerEstadoNovedad.sql" />
+    <Build Include="orden_owner\Stored Procedures\SAL_OBTENERSALDOSPORPERSONA.sql" />
+    <Build Include="orden_owner\Stored Procedures\NOV_OBTENERNOVEDADESDETRANSFERENCIA.sql" />
+    <Build Include="orden_owner\Stored Procedures\SAL_ActualizarEstado.sql" />
+    <Build Include="orden_owner\Stored Procedures\SAL_OBTENERSALDOSPORID.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_SALDOSBYMONEDA.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_OPERACIONESBYPERSONA.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_MOVIMIENTOSBYOPERACION.sql" />
+    <Build Include="orden_owner\Stored Procedures\PIZ_GetPrecioByMonedaCompraYVenta.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_OPERACIONESBYAGENCIA.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_SALDOSBYMONEDAPORAGENCIA.sql" />
+    <Build Include="orden_owner\Tables\Notificaciones.sql" />
+    <Build Include="orden_owner\Sequences\SQ_Notificacion.sql" />
+    <Build Include="orden_owner\Tables\TiposNotificacion.sql" />
+    <Build Include="orden_owner\Tables\SubTiposNotificacion.sql" />
+    <Build Include="orden_owner\Tables\Pizarra.sql" />
+    <Build Include="orden_owner\Sequences\SQ_Pizarra.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_MONEDASYSALDOSBYPERSONA.sql" />
+    <Build Include="orden_owner\Stored Procedures\SAL_OBTENERMOVIMIENTOSSALDOSBYIDPROPIETARIO.sql" />
+    <Build Include="orden_owner\Tables\LimitesCompra.sql" />
+    <Build Include="shared_owner\Tables\Regiones.sql" />
+    <Build Include="shared_owner\Sequences\SQ_Regiones.sql" />
+    <Build Include="orden_owner\Sequences\SQ_LimitesCompra.sql" />
+    <Build Include="shared_owner\Tables\PartiesRegion.sql" />
+    <Build Include="shared_owner\Sequences\SQ_PartiesRegion.sql" />
+    <Build Include="orden_owner\Stored Procedures\QRY_SCRN_MONEDALOCALSYSALDOSBYPERSONA.sql" />
+    <Build Include="orden_owner\Sequences\SQ_UsuarioBloqueado.sql" />
+    <Build Include="orden_owner\Stored Procedures\OPE_CrearRestricciones.sql" />
+    <Build Include="orden_owner\Stored Procedures\OPE_ObtenerCantidadOperada.sql" />
+    <Build Include="shared_owner\Tables\UsuarioBloqueadoParaOperar.sql" />
+    <Build Include="shared_owner\Sequences\SQ_UsuarioBloqueadoParaOperar.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SchComp\GenerateAllCmd.bat" />
+    <None Include="SchComp\maesqldesa4_test.scmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="M4TraderDB.refactorlog" />
+  </ItemGroup>
+</Project>

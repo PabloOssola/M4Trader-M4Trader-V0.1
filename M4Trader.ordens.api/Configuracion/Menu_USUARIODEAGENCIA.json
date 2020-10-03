@@ -1,0 +1,198 @@
+﻿{
+  "top": [
+    {
+      "key": 1,
+      "className": "",
+      "icon": "Home",
+      "name": "Inicio",
+      "title": "Inicio",
+      "url": "/app/dashboard",
+      "permissionMask": 0
+    },
+    //{
+    //  "key": 2,
+    //  "className": "",
+    //  "icon": "SvgIconSearch",
+    //  "name": "Consultas",
+    //  "title": "Consultas",
+    //  "url": "/app/misconsultas",
+    //  "permissionMask": 1,
+    //  "items": [
+    //    {
+    //      "key": 2,
+    //      "className": "",
+    //      "icon": "",
+    //      "name": "ConsultaOperaciones",
+    //      "title": "Consulta de operaciones",
+    //      "url": "/app/consultasUsuarios/consultaOperaciones",
+    //      "actionId": 69,
+    //      "permissionMask": 1
+    //    },
+    //    {
+    //      "key": 3,
+    //      "className": "",
+    //      "icon": "",
+    //      "name": "ConsultaSaldo",
+    //      "title": "Consulta de Saldos",
+    //      "url": "/app/misconsultas/missaldos",
+    //      "actionId": 35,
+    //      "permissionMask": 1
+    //    },
+    //    {
+    //      "key": 4,
+    //      "className": "",
+    //      "icon": "",
+    //      "name": "ConsultaSaldo",
+    //      "title": "Consulta de Tranferencias",
+    //      "url": "/app/misconsultas/mistransferencias",
+    //      "actionId": 35,
+    //      "permissionMask": 1
+    //    },
+    //    {
+    //      "key": 5,
+    //      "className": "",
+    //      "icon": "",
+    //      "name": "datosDelCliente",
+    //      "title": "Datos del cliente",
+    //      "url": "/app/misconsultas/datosDelCliente",
+    //      "actionId": 61,
+    //      "permissionMask": 1
+    //    },
+    //    {
+    //      "key": 6,
+    //      "className": "",
+    //      "icon": "",
+    //      "name": "NovedadesDeTransferencia",
+    //      "title": "Novedades de transferencias de fondos",
+    //      "url": "/app/consultasUsuarios/novedadesTransferenciaFondos",
+    //      "actionId": 70,
+    //      "permissionMask": 1
+    //    }
+
+    //  ]
+    //},
+    {
+      "key": 7,
+      "className": "Ingresar y Retirar",
+      "icon": "SvgIconMessageAlert",
+      "name": "IngresaryRetirar",
+      "title": "Ingresar y Retirar",
+      "url": "/app/misingresos",
+      "items": [
+        {
+          "key": 1,
+          "className": "",
+          "icon": "",
+          "name": "ingresar",
+          "title": "Ingresar",
+          "url": "/app/misingresos/ingresar",
+          "actionId": 64,
+          "permissionMask": 1
+        },
+        {
+          "key": 2,
+          "className": "",
+          "icon": "",
+          "name": "Retirar",
+          "title": "Retirar",
+          "url": "/app/misingresos/retirar",
+          "actionId": 64,
+          "permissionMask": 1
+        }
+      ]
+    },
+    {
+      "key": 8,
+      "className": "Operar",
+      "icon": "SvgIconMessageAlert",
+      "name": "Operar",
+      "title": "Operar",
+      "url": "/app/operar",
+      //"items": [
+      //  {
+      //    "key": 1,
+      //    "className": "",
+      //    "icon": "",
+      //    "name": "comprar",
+      //    "title": "Comprar",
+      //    "url": "/app/operar/comprar",
+      //    "actionId": 64,
+      //    "permissionMask": 1
+      //  },
+      //  {
+      //    "key": 2,
+      //    "className": "",
+      //    "icon": "",
+      //    "name": "Vender",
+      //    "title": "Vender",
+      //    "url": "/app/operar/vender",
+      //    "actionId": 64,
+      //    "permissionMask": 1
+      //  }
+      //]
+    },
+    {
+      "key": 5,
+      "className": "Mensajes y alertas",
+      "icon": "SvgIconMessageAlert",
+      "name": "Mensajesyalertas",
+      "title": "Mensajes y alertas",
+      "url": "/app/mismensajes",
+      "permissionMask": 1,
+      "items": [
+        {
+          "key": 1,
+          "className": "",
+          "icon": "",
+          "name": "Crear",
+          "title": "Crear",
+          "url": "/app/mismensajes/crear",
+          "actionId": 64,
+          "permissionMask": 1
+        },
+        {
+          "key": 2,
+          "className": "",
+          "icon": "",
+          "name": "Enviados",
+          "title": "Enviados",
+          "url": "/app/mismensajes/enviados",
+          "actionId": 65,
+          "permissionMask": 1
+        },
+        {
+          "key": 3,
+          "className": "",
+          "icon": "",
+          "name": "Recibidos",
+          "title": "Recibidos",
+          "url": "/app/mismensajes/recibidos",
+          "actionId": 66,
+          "permissionMask": 1
+        }
+      ]
+    },
+    {
+      "key": 6,
+      "className": "",
+      "icon": "SvgIconPrecioPizarra",
+      "name": "PreciosyPizarras",
+      "title": "Precios y Pizarras",
+      "url": "/app/consultaUsuarios/preciosYPizarra/pizarra",
+      "actionId": 68,
+      "permissionMask": 1
+    }
+  ],
+  "foot": [
+    {
+      "key": 1,
+      "className": "",
+      "icon": "fa fa-sign-out",
+      "name": "Logout",
+      "title": "Desconectar",
+      "url": "TimeoutRedirect",
+
+      "permissionMask": 0
+    }
+  ]
+}

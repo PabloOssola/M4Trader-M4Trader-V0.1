@@ -1,0 +1,180 @@
+﻿{
+  "top": [
+    {
+      "key": 1,
+      "className": "",
+      "icon": "Home",
+      "name": "Inicio",
+      "title": "Inicio",
+      "url": "/app/dashboard",
+      "permissionMask": 0
+    },
+    {
+      "key": 2,
+      "className": "",
+      "icon": "SvgIconSearch",
+      "name": "Consultas",
+      "title": "Consultas",
+      "url": "/app/consultas",
+      "permissionMask": 1,
+      "items": [
+        {
+          "key": 1,
+          "className": "",
+          "icon": "",
+          "name": "Administraciondesaldos",
+          "title": "Administrar saldos",
+          "url": "/app/consultas/saldos",
+          "actionId": 58,
+          "permissionMask": 1
+        },
+        {
+          "key": 2,
+          "className": "",
+          "icon": "",
+          "name": "Operacioneshistoricasdecliente",
+          "title": "Operaciones historicas",
+          "url": "/app/consultas/cotizacionesHistoricas",
+          "actionId": 59,
+          "permissionMask": 1
+        },
+        {
+          "key": 3,
+          "className": "",
+          "icon": "",
+          "name": "Cotizacioneshistoricas",
+          "title": "Cotizaciones historicas",
+          "url": "/app/consultas/cotizacionesHistoricas",
+          "actionId": 60,
+          "permissionMask": 1
+        },
+        {
+          "key": 4,
+          "className": "",
+          "icon": "",
+          "name": "ConsultaOperaciones",
+          "title": "Consulta de operaciones",
+          "url": "/app/consultas/consultaOperaciones",
+          "actionId": 69,
+          "permissionMask": 1
+        },
+        {
+          "key": 5,
+          "className": "",
+          "icon": "",
+          "name": "ConsultaSaldo",
+          "title": "Consulta de Saldos",
+          "url": "/app/consultas/consultaSaldos",
+          "actionId": 35,
+          "permissionMask": 1
+        },
+        {
+          "key": 6,
+          "className": "",
+          "icon": "",
+          "name": "datosDelCliente",
+          "title": "Datos del cliente",
+          "url": "/app/consultas/datosDelCliente",
+          "actionId": 61,
+          "permissionMask": 1
+        }
+
+      ]
+    },
+    {
+      "key": 3,
+      "className": "",
+      "icon": "SvgIconStatatics",
+      "name": "Estadistica",
+      "title": "Estadística",
+      "url": "/app/estadistica",
+      "actionId": 62,
+      "permissionMask": 1
+    },
+    {
+      "key": 4,
+      "className": "",
+      "icon": "SvgIconAdminUser",
+      "name": "Administraciondeusuarios",
+      "title": "Administración de usuarios",
+      "url": "/app/usuarios",
+      "actionId": 63,
+      "permissionMask": 1,
+      "items": [
+        {
+          "key": 1,
+          "className": "",
+          "icon": "",
+          "name": "Gestion",
+          "title": "Gestion",
+          "url": "/app/usuarios/gestion",
+          "actionId": 64,
+          "permissionMask": 1
+        }
+       ]
+    },
+    {
+      "key": 5,
+      "className": "Mensajes y alertas",
+      "icon": "SvgIconMessageAlert",
+      "name": "Mensajesyalertas",
+      "title": "Mensajes y alertas",
+      "url": "/app/mensajes",
+      "permissionMask": 1,
+      "items": [
+        {
+          "key": 1,
+          "className": "",
+          "icon": "",
+          "name": "Crear",
+          "title": "Crear",
+          "url": "/app/mensajes/crear",
+          "actionId": 64,
+          "permissionMask": 1
+        },
+        {
+          "key": 2,
+          "className": "",
+          "icon": "",
+          "name": "Enviados",
+          "title": "Enviados",
+          "url": "/app/mensajes/enviados",
+          "actionId": 65,
+          "permissionMask": 1
+        },
+        {
+          "key": 3,
+          "className": "",
+          "icon": "",
+          "name": "Recibidos",
+          "title": "Recibidos",
+          "url": "/app/mensajes/recibidos",
+          "actionId": 66,
+          "permissionMask": 1
+        }
+      ]
+    },
+    {
+      "key": 6,
+      "className": "",
+      "icon": "SvgIconPrecioPizarra",
+      "name": "PreciosyPizarras",
+      "title": "Precios y Pizarras",
+      "url": "/app/preciosYPizarra/pizarra",
+      "actionId": 68,
+      "permissionMask": 1
+    } 
+  ],
+  "foot": [
+    {
+      "key": 1,
+      "className": "",
+      "icon": "fa fa-sign-out",
+      "name": "Logout",
+      "title": "Desconectar",
+      "url": "TimeoutRedirect",
+
+      "permissionMask": 0
+    }
+  ]
+}

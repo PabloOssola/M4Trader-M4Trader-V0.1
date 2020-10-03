@@ -1,0 +1,5 @@
+{
+    "material-ui-snippets.addCompletionImports": true,
+    "emmet.triggerExpansionOnTab": true,
+    "editor.suggest.statusBar.visible": true
+}

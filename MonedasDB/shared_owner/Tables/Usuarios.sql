@@ -1,0 +1,25 @@
+﻿CREATE TABLE [shared_owner].[Usuarios] (
+    [IdUsuario]                  INT          CONSTRAINT [DF_Usuarios_IdUsuario] DEFAULT (NEXT VALUE FOR [shared_owner].[SQ_Usuarios]) NOT NULL,
+    [Username]                   VARCHAR (50) NOT NULL,
+    [Pass]                       VARCHAR (32) NOT NULL,
+    [Nombre]                     VARCHAR (50) NOT NULL,
+    [Expiracion]                 DATETIME     NULL,
+    [FechaBaja]                  DATETIME     NULL,
+    [CantidadIntentos]           INT          NULL,
+    [Bloqueado]                  BIT          CONSTRAINT [DF__Usuarios__Bloqueado] DEFAULT ((0)) NOT NULL,
+    [Proceso]                    BIT          CONSTRAINT [DF__Usuarios__Proceso] DEFAULT ((0)) NOT NULL,
+    [BajaLogica]                 BIT          CONSTRAINT [DF__Usuarios__BajaLogica] DEFAULT ((0)) NOT NULL,
+    [ResetPassword]				 BIT          CONSTRAINT [DF__Usuarios__ResetPassword] DEFAULT ((0)) NOT NULL,
+	[UltimaActualizacion]        ROWVERSION   NULL,
+    [UltimaModificacionPassword] DATETIME     NULL,
+    [UltimoLoginExitoso]         DATETIME     NULL,
+    [NoControlarInactividad]     BIT          CONSTRAINT [DF__Usuarios__NoControlarInactividad] DEFAULT ((0)) NOT NULL,
+    [IdPersona]                  INT          NOT NULL,
+    [LoginRealizado]             BIT          CONSTRAINT [DF__Usuarios__LoginRealizado] DEFAULT ((0)) NOT NULL,
+    [FechaReactivacion]          DATETIME     NULL,
+	[Email]						 VARCHAR (50) NULL,
+	[ConfiguracionRegional]		 VARCHAR (8)  CONSTRAINT [DF__Usuarios__ConfiguracionRegional] DEFAULT 'es-AR' NOT NULL,
+    CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED ([IdUsuario] ASC) WITH (FILLFACTOR = 90),
+    CONSTRAINT [FK_Usuarios_Parties] FOREIGN KEY ([IdPersona]) REFERENCES [shared_owner].[Parties] ([IdParty])
+);
+

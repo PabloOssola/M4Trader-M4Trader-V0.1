@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true"  Factory="M4Trader.ordenes.server.Services.OrdenServiceFactory, M4Trader.ordenes.server"  Service="M4Trader.ordenes.server.Services.OrdenService, M4Trader.ordenes.server" %>
